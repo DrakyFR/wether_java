@@ -33,7 +33,7 @@ document.getElementById('weather-form').addEventListener('submit', async functio
         document.getElementById('commune-name').textContent = communeName;
         document.getElementById('temp-min').textContent = forecast.tmin;
         document.getElementById('temp-max').textContent = forecast.tmax;
-        document.getElementById('rain-probability').textContent = forecast.probability_rain;
+        document.getElementById('rain-probability').textContent = forecast.probarain;
         document.getElementById('sun-hours').textContent = forecast.sun_hours;
 
         weatherResults.classList.remove('hidden');
