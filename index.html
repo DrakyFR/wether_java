@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instant Weather</title>
-  </head>
-  <body>
-    <header>
-      <h1>INSTANT WEATHER</h1>
-      <p>Votre météo en un clic</p>
-      <p>Choisissez votre commune et consultez les prévisions du jour</p>
-    </header>
-    <main>
-      <section id="cityForm">
-        <form id="cityForm_form" action="dummy">
-          <label for="code-postal">Saisissez un code postal</label>
-          <input
-            type="text"
-            id="code-postal"
-            placeholder="Entrez un code postal..."
-          />
-          <label
-            for="communeSelect"
-            class="sr-only"
-            aria-label="Choix de la commune"
-            >Sélectionnez la commune</label
-          >
-          <select id="communeSelect"></select>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Instant Weather</h1>
+        <form id="weather-form">
+            <label for="postal-code">Code postal :</label>
+            <input type="text" id="postal-code" name="postal-code" required>
+            <button type="submit">Rechercher</button>
         </form>
-        <button id="validationButton">Valider</button>
-      </section>
-      <section id="weatherInformation">
-      </section>
-    </main>
-  </body>
+        <div id="weather-results" class="hidden">
+            <h2>Résultats pour : <span id="commune-name"></span></h2>
+            <ul>
+                <li>Température minimale : <span id="temp-min"></span>°C</li>
+                <li>Température maximale : <span id="temp-max"></span>°C</li>
+                <li>Probabilité de pluie : <span id="rain-probability"></span>%</li>
+                <li>Ensoleillement : <span id="sun-hours"></span> heures</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
