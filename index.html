@@ -7,12 +7,33 @@
     <title>Instant Weather V2</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
-
+    
 </head>
 
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le thème">
+                🌙 Mode sombre
+            </button>
+            <h1>Instant Weather V2</h1>
+            <p>Prévisions météorologiques détaillées pour votre commune</p>
+        </header>
 
+        <div class="form-container">
+            <form id="weatherForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cityInput">Nom de la commune</label>
+                        <input type="text" id="cityInput" name="city" required
+                            placeholder="Entrez le nom de votre commune" aria-describedby="cityHelp">
+                        <small id="cityHelp" style="color: var(--text-secondary); margin-top: 5px;">
+                            Exemple: Paris, Lyon, Marseille...
+                        </small>
+                    </div>
+                </div>
+
+                
 
 </body>
 
