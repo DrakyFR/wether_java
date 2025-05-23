@@ -1,3 +1,17 @@
+:root {
+  --primary-color: #2563eb;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-primary: #ffffff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #f97316;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --bg-primary: #000000;
+}
+
 
 
 * {
